@@ -118,6 +118,18 @@
       p.textContent = paragraph;
       textEl.appendChild(p);
     });
+
+    // Handle portrait image loading
+    const portraitImg = document.querySelector('.about__portrait');
+    if (portraitImg) {
+      portraitImg.addEventListener('load', function() {
+        this.classList.add('loaded');
+      });
+      // If image is already cached/loaded
+      if (portraitImg.complete) {
+        portraitImg.classList.add('loaded');
+      }
+    }
   }
 
   // ============================================================================
