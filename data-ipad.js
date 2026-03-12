@@ -1,7 +1,7 @@
 /* data-ipad.js — Project Data for iPad Portfolio
  *
  * Auto-synced from tools/data.js
- * Last sync: 3/12/2026, 1:08:28 PM
+ * Last sync: 3/12/2026, 1:21:15 PM
  *
  * To update: Run 'node sync-to-ipad.js' from project root
  */
@@ -43,7 +43,7 @@ var PROJECTS = [
     tagline: 'Reimagining a culinary icon through spatial design',
     categories: ['interior-design', 'architectural-design'],
     image: { src: 'images/projects/CAFE BOULUD/CAFE_BOULUD_BH_HD_02.jpg', alt: 'Cafe Boulud — interior rendering' },
-    featured: true
+    featured: false
   },
   {
     id: 'royal-fromentin',
@@ -51,7 +51,7 @@ var PROJECTS = [
     tagline: 'Restoring grandeur with contemporary precision',
     categories: ['interior-design', 'architectural-design'],
     image: { src: 'images/projects/ROYAL FROMENTIN/01.png', alt: 'Royal Fromentin — exterior rendering' },
-    featured: true
+    featured: false
   },
   {
     id: 'muse',
@@ -59,7 +59,7 @@ var PROJECTS = [
     tagline: 'Where art meets architecture in curated space',
     categories: ['interior-design', 'art-direction'],
     image: { src: 'images/projects/MUSE/01-COMPLETED-03.jpg', alt: 'MUSE — wall sconce detail' },
-    featured: true
+    featured: false
   },
   {
     id: 'if-buildings-could-talk',
@@ -67,7 +67,7 @@ var PROJECTS = [
     tagline: 'Giving voice to architecture through media projection',
     categories: ['media-art', 'technological-integration'],
     image: { src: 'images/projects/If buildings could talk/01.png', alt: 'If Buildings Could Talk — facade media projection' },
-    featured: false
+    featured: true
   },
   {
     id: 'z-hotel',
@@ -75,7 +75,7 @@ var PROJECTS = [
     tagline: 'Engineering hospitality at the edge of computation',
     categories: ['architectural-design', 'technological-integration'],
     image: { src: 'images/projects/Z Hotel/01.jpeg', alt: 'Z Hotel — architectural exterior', position: 'left center' },
-    featured: true
+    featured: false
   },
   {
     id: 'ad-space-club',
@@ -83,7 +83,7 @@ var PROJECTS = [
     tagline: 'Designing immersive environments for nightlife culture',
     categories: ['art-direction', 'interior-design'],
     image: { src: 'images/projects/AD Space Club/01.png', alt: 'AD Space Club — immersive club environment' },
-    featured: false
+    featured: true
   },
   {
     id: 'puto-hotel',
@@ -91,7 +91,7 @@ var PROJECTS = [
     tagline: 'Sculpting hospitality through geometric glass and raw concrete',
     categories: ['architectural-design', 'interior-design'],
     image: { src: 'images/projects/Puto Hotel/01.jpg', alt: 'Puto Hotel — exterior view' },
-    featured: false
+    featured: true
   },
   {
     id: 'mediated-reality',
@@ -107,7 +107,7 @@ var PROJECTS = [
     tagline: 'Materializing sound culture through sculptural installation',
     categories: ['media-art', 'art-direction'],
     image: { src: 'images/projects/A$AS Hommade/01_hommade-02.png', alt: 'A$AP Hommade — installation with artist' },
-    featured: false
+    featured: true
   }
 ];
 
