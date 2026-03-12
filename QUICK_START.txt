@@ -1,0 +1,70 @@
+═══════════════════════════════════════════════════════════════════════
+  AGM PORTFOLIO FOR iPAD — QUICK START
+═══════════════════════════════════════════════════════════════════════
+
+🎯 STEP 1: Get Google Drive File IDs (10-15 minutes)
+─────────────────────────────────────────────────────
+
+For each image in Google Drive:
+  1. Right-click → "Get link"
+  2. Set to "Anyone with link can view"
+  3. Copy the link
+  4. Extract the FILE_ID (the random string in the middle)
+
+Example link:
+  https://drive.google.com/file/d/1a2b3c4d5e6f7g8h9/view?usp=sharing
+  FILE_ID = 1a2b3c4d5e6f7g8h9
+
+
+🎯 STEP 2: Fill in image-mappings.csv (5-10 minutes)
+──────────────────────────────────────────────────────
+
+Open: image-mappings.csv
+
+Replace each "FILE_ID" with your actual file ID:
+  images/projects/MUSE/011_MUSE.png,1a2b3c4d5e6f7g8h9
+
+Save the file.
+
+
+🎯 STEP 3: Run Conversion Script (30 seconds)
+──────────────────────────────────────────────
+
+Open terminal and run:
+
+  cd "g:\My Drive\001_Atelier Galileo\009_AntiGravity\04_AG Website\ipad"
+  node convert-to-gdrive-urls.js
+
+Done! ✓
+
+
+🎯 STEP 4: Upload to GitHub (5 minutes)
+────────────────────────────────────────
+
+1. Create new GitHub repo
+2. Upload all ipad/ folder contents
+3. Settings → Pages → Enable
+4. Get your URL: https://USERNAME.github.io/REPO_NAME/
+
+
+🎯 STEP 5: Install on iPad (1 minute)
+───────────────────────────────────────
+
+1. Open Safari, go to your GitHub Pages URL
+2. Tap Share → "Add to Home Screen"
+3. Name it "AGM Portfolio"
+4. Done! 🎉
+
+
+═══════════════════════════════════════════════════════════════════════
+
+📁 Files Created:
+  ✓ convert-to-gdrive-urls.js  - Conversion script
+  ✓ image-mappings.csv          - Template to fill in
+  ✓ HOW_TO_CONVERT_URLS.txt     - Detailed instructions
+  ✓ SETUP_GUIDE.txt             - Full setup guide
+  ✓ README.md                   - Complete documentation
+
+📝 Total Time: ~20-30 minutes
+
+═══════════════════════════════════════════════════════════════════════

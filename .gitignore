@@ -1,0 +1,28 @@
+# Node modules (if you add npm packages later)
+node_modules/
+
+# Backup files
+*.backup.js
+*.backup.css
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.log
+
+# Unnecessary files for deployment
+convert-to-gdrive-urls.js
+image-mappings.csv
+HOW_TO_CONVERT_URLS.txt
+ipad-portfolio.zip
+ipad-portfolio.tar.gz

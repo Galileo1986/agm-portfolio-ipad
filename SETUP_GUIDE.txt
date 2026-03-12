@@ -1,0 +1,93 @@
+═══════════════════════════════════════════════════════════════════════
+  AGM PORTFOLIO FOR iPAD — QUICK SETUP GUIDE
+═══════════════════════════════════════════════════════════════════════
+
+STEP 1: UPDATE IMAGE URLS IN data-ipad.js
+──────────────────────────────────────────
+
+1. Upload all project images to Google Drive
+2. For each image:
+   - Right-click → "Get link" → "Anyone with link can view"
+   - Copy the link: https://drive.google.com/file/d/FILE_ID/view?usp=sharing
+   - Extract the FILE_ID part
+   - Use format: https://drive.google.com/uc?export=view&id=FILE_ID
+
+3. Open data-ipad.js and replace ALL "images/..." paths with your Google Drive URLs
+
+Example:
+  BEFORE: src: 'images/projects/CAFE BOULUD/01.jpg'
+  AFTER:  src: 'https://drive.google.com/uc?export=view&id=1a2b3c4d5e6f7g8h9'
+
+
+STEP 2: CREATE APP ICONS (OPTIONAL BUT RECOMMENDED)
+──────────────────────────────────────────────────
+
+Create two PNG images:
+- icon-192.png (192x192 pixels)
+- icon-512.png (512x512 pixels)
+
+Use your logo or a simple "AGM" text on dark background.
+Save them in the ipad/ folder.
+
+
+STEP 3: UPLOAD TO GITHUB
+─────────────────────────
+
+1. Create new GitHub repo (e.g., "agm-portfolio-ipad")
+2. Upload ALL files from ipad/ folder to repo root
+3. Go to Settings → Pages
+4. Enable Pages: Source = "main" branch
+5. Your URL will be: https://YOUR_USERNAME.github.io/agm-portfolio-ipad/
+
+
+STEP 4: INSTALL ON iPAD
+───────────────────────
+
+1. Open Safari on iPad
+2. Go to your GitHub Pages URL
+3. Tap Share button (square with arrow)
+4. Tap "Add to Home Screen"
+5. Name it "AGM Portfolio"
+6. Tap "Add"
+
+Done! You now have a full-screen app on your iPad.
+
+
+USAGE TIPS
+──────────
+
+✓ Use iPad Pro in LANDSCAPE orientation
+✓ Swipe left/right to navigate between projects
+✓ Tap any project to view details
+✓ Works offline after first load
+✓ Pinch-zoom works on gallery images
+
+
+CUSTOMIZATION
+─────────────
+
+Adjust spacing in css/styles-ipad.css:
+  --pad-horizontal: 100px;   (side padding)
+  --gallery-pad: 120px;      (gallery padding)
+  --gap: 40px;               (image gaps)
+
+
+TROUBLESHOOTING
+───────────────
+
+Images not loading?
+→ Check Google Drive link permissions
+→ Verify URL format: https://drive.google.com/uc?export=view&id=FILE_ID
+
+Can't install as app?
+→ Must use Safari (not Chrome)
+→ Must be HTTPS (GitHub Pages handles this)
+
+Layout broken?
+→ Ensure iPad is in LANDSCAPE mode
+→ Optimized for iPad Pro 11" & 12.9" (1200-1400px)
+
+
+═══════════════════════════════════════════════════════════════════════
+Need help? Check README.md for detailed instructions.
+═══════════════════════════════════════════════════════════════════════

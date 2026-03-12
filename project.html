@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AGM Portfolio">
+
+  <title id="pageTitle">Project — Atelier Galileo Morandi</title>
+  <meta name="description" content="Project detail by Atelier Galileo Morandi.">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles-ipad.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <button class="nav__back" id="backBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        BACK
+      </button>
+      <a href="index.html" class="nav__logo">AGM&copy;</a>
+      <span class="nav__clock" id="clock"></span>
+    </div>
+  </nav>
+
+  <!-- Project Detail -->
+  <main class="project" id="projectDetail">
+
+    <!-- Hero -->
+    <section class="project__hero">
+      <h1 class="project__title" id="projTitle"></h1>
+      <p class="project__subtitle" id="projSubtitle"></p>
+    </section>
+
+    <!-- Hero Image -->
+    <section class="project__hero-image" id="projHeroImage">
+      <img src="" alt="" id="projHeroImg">
+    </section>
+
+    <!-- Metadata -->
+    <section class="project__meta">
+      <div class="project__meta-left" id="projMetaLeft"></div>
+      <div class="project__meta-right">
+        <span class="project__label">INFO</span>
+        <p class="project__info" id="projInfo"></p>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="project__gallery" id="projGallery"></section>
+
+    <!-- Navigation -->
+    <section class="project__nav">
+      <button class="project__nav-btn project__nav-btn--prev" id="prevProject">
+        <span>← PREVIOUS</span>
+        <span class="project__nav-name" id="prevProjectName"></span>
+      </button>
+      <button class="project__nav-btn project__nav-btn--next" id="nextProject">
+        <span>NEXT →</span>
+        <span class="project__nav-name" id="nextProjectName"></span>
+      </button>
+    </section>
+
+  </main>
+
+  <script src="data-ipad.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/project-detail.js"></script>
+</body>
+</html>

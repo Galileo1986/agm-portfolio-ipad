@@ -1,0 +1,75 @@
+═══════════════════════════════════════════════════════════════════════
+  APP ICON INSTRUCTIONS (Optional)
+═══════════════════════════════════════════════════════════════════════
+
+For the best "Add to Home Screen" experience, create these icon files:
+
+REQUIRED FILES:
+───────────────
+1. icon-192.png  (192 × 192 pixels)
+2. icon-512.png  (512 × 512 pixels)
+
+DESIGN GUIDELINES:
+──────────────────
+• Dark background (#1A1A1A to match your site)
+• White or light text/logo
+• Simple and recognizable
+• No transparency (use solid background)
+• Square format
+
+DESIGN IDEAS:
+─────────────
+Option 1: Simple Text
+  - "AGM" in Satoshi font
+  - Centered on dark background
+  - Minimal and professional
+
+Option 2: Logo/Symbol
+  - Your studio logo
+  - Centered with padding
+  - High contrast
+
+Option 3: Initials
+  - "GM" or "AGM©"
+  - Large, bold typography
+  - Geometric layout
+
+HOW TO CREATE:
+──────────────
+
+Using Figma/Sketch/Photoshop:
+1. Create 512×512px canvas with #1A1A1A background
+2. Add white text "AGM" (Satoshi Bold, 200pt)
+3. Center it
+4. Export as PNG @ 1x (512×512)
+5. Export as PNG @ 0.375x (192×192)
+
+Using Online Tool:
+1. Go to: https://www.favicon-generator.org/
+2. Upload a simple image or logo
+3. Generate icons
+4. Download 192px and 512px versions
+
+Using AI (DALL-E/Midjourney):
+Prompt: "Minimalist app icon, dark background #1A1A1A, white text 'AGM',
+modern architecture studio, professional, square format"
+
+SAVE TO:
+────────
+ipad/icon-192.png
+ipad/icon-512.png
+
+TESTING:
+────────
+After adding icons:
+1. Commit and push to GitHub
+2. Go to your GitHub Pages URL on iPad
+3. Tap "Add to Home Screen"
+4. You should see your custom icon!
+
+═══════════════════════════════════════════════════════════════════════
+
+Note: If you skip this step, iPad will use a screenshot of your page
+as the icon (which works fine but looks less professional).
+
+═══════════════════════════════════════════════════════════════════════

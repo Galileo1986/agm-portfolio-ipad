@@ -1,0 +1,426 @@
+/* ==========================================================================
+   styles-ipad.css — AGM Portfolio for iPad Pro
+   Optimized for landscape presentation mode (1200-1400px width)
+   ========================================================================== */
+
+/* 1. Font Face
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../../tools/fonts/Satoshi-Variable.woff2') format('woff2');
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. Custom Properties
+   ========================================================================== */
+
+:root {
+  --bg: #1A1A1A;
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --text-body: rgba(255, 255, 255, 0.85);
+  --divider: rgba(255, 255, 255, 0.1);
+
+  --font: 'Satoshi', 'Inter', system-ui, sans-serif;
+  --serif: 'Playfair Display', 'Times New Roman', Georgia, serif;
+
+  /* iPad-optimized spacing */
+  --pad-horizontal: 100px;
+  --gallery-pad: 120px;
+  --gap: 40px;
+
+  /* Touch targets */
+  --touch-min: 44px;
+}
+
+/* 3. Reset / Base
+   ========================================================================== */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* Disable text selection for presentation mode */
+  -webkit-user-select: none;
+  user-select: none;
+  /* Disable tap highlight */
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* Allow pinch-zoom on images */
+  touch-action: pinch-zoom;
+}
+
+a, button {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  /* Ensure touch targets are at least 44x44px */
+  min-height: var(--touch-min);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+/* 4. Navigation
+   ========================================================================== */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 24px 0;
+  background: linear-gradient(180deg, var(--bg) 70%, transparent);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--pad-horizontal);
+}
+
+.nav__logo {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav__title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+}
+
+.nav__clock {
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+}
+
+.nav__back {
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav__back:active {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.nav__back svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* 5. Projects Grid (Homepage)
+   ========================================================================== */
+
+.projects {
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 0 var(--pad-horizontal);
+}
+
+.project-card {
+  display: block;
+  transition: transform 0.2s ease;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.project-card:active {
+  transform: scale(0.98);
+}
+
+.project-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #222;
+  object-fit: cover;
+}
+
+.project-card__name {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 12px;
+  padding: 0 8px;
+}
+
+.project-card__tagline {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+  line-height: 1.4;
+  padding: 0 8px;
+}
+
+/* 6. Project Detail Page
+   ========================================================================== */
+
+.project {
+  padding-top: 100px;
+}
+
+/* Hero */
+.project__hero {
+  padding: 0 var(--pad-horizontal);
+  padding-bottom: 40px;
+}
+
+.project__title {
+  font-family: var(--serif);
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.project__subtitle {
+  font-size: 17px;
+  font-weight: 400;
+  color: #999999;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* Hero Image */
+.project__hero-image {
+  width: calc(100% - 360px);
+  margin: 0 auto 80px;
+  background: #222;
+}
+
+.project__hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Metadata */
+.project__meta {
+  display: flex;
+  gap: 80px;
+  padding: 0 var(--pad-horizontal);
+  padding-bottom: 80px;
+}
+
+.project__meta-left {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.project__meta-right {
+  flex: 1;
+}
+
+.project__label {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #666666;
+  margin-bottom: 8px;
+}
+
+.project__meta-value {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.project__info {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #CCCCCC;
+}
+
+/* Gallery */
+.project__gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  padding: 0 var(--gallery-pad);
+  margin-bottom: 80px;
+}
+
+.project__gallery-item {
+  /* Allow tap to view full-screen (future enhancement) */
+  cursor: pointer;
+}
+
+.project__gallery-item img {
+  display: block;
+  max-width: 100%;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Portrait images: constrain width to prevent oversizing */
+.project__gallery-item--portrait img {
+  max-width: 85%;
+}
+
+.project__gallery-item--wide {
+  grid-column: 1 / -1;
+}
+
+.project__gallery-item--wide img {
+  max-width: 100%;
+  max-height: 65vh;
+}
+
+/* Navigation between projects */
+.project__nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 var(--pad-horizontal);
+  padding-bottom: 60px;
+  border-top: 1px solid var(--divider);
+  padding-top: 40px;
+  margin-top: 40px;
+}
+
+.project__nav-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: background 0.2s ease;
+  min-height: 80px;
+}
+
+.project__nav-btn--next {
+  align-items: flex-end;
+}
+
+.project__nav-btn:active {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.project__nav-btn span:first-child {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+}
+
+.project__nav-name {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-primary);
+}
+
+/* 7. Utilities
+   ========================================================================== */
+
+.hidden {
+  display: none !important;
+}
+
+/* 8. Loading State
+   ========================================================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+/* 9. Presentation Mode Enhancements
+   ========================================================================== */
+
+/* Optional: Add a subtle fade when scrolling */
+body.scrolling .nav {
+  opacity: 0.95;
+}
+
+/* Smooth image loading */
+img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+img.loaded {
+  opacity: 1;
+}
