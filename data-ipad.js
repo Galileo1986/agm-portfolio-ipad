@@ -338,3 +338,48 @@ var PROJECT_DETAILS = {
     ]
   }
 };
+
+var SERVICES = [
+  {
+    id: 'architectural-design',
+    name: 'ARCHITECTURAL DESIGN',
+    description: 'Exterior and interior architectural projects with a focus on computational design and digital fabrication.',
+    image: { src: 'images/services/ARCHITECTURAL DESIGN.png', alt: 'Architectural design — angular geometry with dramatic lighting' }
+  },
+  {
+    id: 'interior-design',
+    name: 'INTERIOR DESIGN',
+    description: 'High-end interior spaces with curated materials, bespoke furniture, and sculptural details.',
+    image: { src: 'images/services/INTERIOR DESIGN.jpeg', alt: 'Interior design — curated materials and warm lighting' }
+  },
+  {
+    id: 'art-direction',
+    name: 'ART DIRECTION',
+    description: 'Editorial-style compositions, set design, and campaign shoots with strong visual narrative.',
+    image: { src: 'images/services/ART DIRECTION.png', alt: 'Art direction — editorial composition and styled objects' }
+  },
+  {
+    id: 'media-art',
+    name: 'MEDIA ART',
+    description: 'Immersive installations, projection mapping, and digital art in physical space.',
+    image: { src: 'images/services/MEDIA ART.png', alt: 'Media art — immersive installation with light and color' }
+  },
+  {
+    id: 'digital-fabrication',
+    name: 'DIGITAL FABRICATION',
+    description: 'CNC-milled and 3D-printed objects with parametric geometry and visible tool paths.',
+    image: { src: 'images/services/DIGITAL FABRICATION.jpg', alt: 'Digital fabrication — CNC-milled parametric object closeup' }
+  },
+  {
+    id: 'technological-integration',
+    name: 'TECHNOLOGICAL INTEGRATION',
+    description: 'Computational design visualization, algorithmic patterns, and smart-system interfaces.',
+    image: { src: 'images/services/TECHNOLOGICAL INTEGRATION.png', alt: 'Technological integration — algorithmic pattern visualization' }
+  }
+];
+
+var BIO_TEXT = [
+  'Atelier Galileo Morandi is a design office working at the intersection of creativity and technology. The studio is involved with a variety of architecture and interior design projects, with a core focus on the integration between digital manufacturing and computational design — delivering custom, high-end products to clients such as A$AP Rocky, SHVO, Daniel Boulud, Waldorf Astoria, and Boffi.',
+  'The studio is currently engaged in publishing for Elle Decor Italy, contributing a dedicated weekly column on Innovations in Architecture & Technology.',
+  'Galileo previously served as Senior Associate at Jerde Partnership in Los Angeles and Dewan Architects in Dubai, directing the computational design departments for both offices and leading several large-scale developments across the USA, South America, China, Europe, and the Middle East.'
+];

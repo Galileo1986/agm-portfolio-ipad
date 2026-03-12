@@ -27,21 +27,17 @@
   setInterval(updateClock, 60000);
 
   // ============================================================================
-  // Projects Grid (Homepage)
+  // Selected Works (Featured Projects Only)
   // ============================================================================
 
-  function renderProjectsGrid() {
-    const gridEl = document.getElementById('projectsGrid');
+  function renderWorksGrid() {
+    const gridEl = document.getElementById('worksGrid');
     if (!gridEl) return;
 
-    // Sort projects: featured first, then rest
-    const sortedProjects = [...PROJECTS].sort((a, b) => {
-      if (a.featured && !b.featured) return -1;
-      if (!a.featured && b.featured) return 1;
-      return 0;
-    });
+    // Only show featured projects
+    const featuredProjects = PROJECTS.filter(p => p.featured);
 
-    sortedProjects.forEach(project => {
+    featuredProjects.forEach(project => {
       const card = document.createElement('a');
       card.href = `project.html?id=${project.id}`;
       card.className = 'project-card';
@@ -69,6 +65,58 @@
       card.appendChild(name);
       card.appendChild(tagline);
       gridEl.appendChild(card);
+    });
+  }
+
+  // ============================================================================
+  // Services Grid
+  // ============================================================================
+
+  function renderServices() {
+    const gridEl = document.getElementById('servicesGrid');
+    if (!gridEl) return;
+
+    SERVICES.forEach(service => {
+      const card = document.createElement('div');
+      card.className = 'service-card';
+
+      const img = document.createElement('img');
+      img.src = service.image.src;
+      img.alt = service.image.alt;
+      img.className = 'service-card__image';
+      img.loading = 'lazy';
+
+      img.addEventListener('load', function() {
+        this.classList.add('loaded');
+      });
+
+      const name = document.createElement('h3');
+      name.className = 'service-card__name';
+      name.textContent = service.name;
+
+      const description = document.createElement('p');
+      description.className = 'service-card__description';
+      description.textContent = service.description;
+
+      card.appendChild(img);
+      card.appendChild(name);
+      card.appendChild(description);
+      gridEl.appendChild(card);
+    });
+  }
+
+  // ============================================================================
+  // About Section
+  // ============================================================================
+
+  function renderAbout() {
+    const textEl = document.getElementById('aboutText');
+    if (!textEl) return;
+
+    BIO_TEXT.forEach(paragraph => {
+      const p = document.createElement('p');
+      p.textContent = paragraph;
+      textEl.appendChild(p);
     });
   }
 
@@ -123,7 +171,9 @@
   // ============================================================================
 
   function init() {
-    renderProjectsGrid();
+    renderWorksGrid();
+    renderServices();
+    renderAbout();
     addTouchFeedback();
     preventDefaultBehaviors();
   }

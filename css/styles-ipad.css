@@ -161,19 +161,74 @@ button {
   height: 20px;
 }
 
-/* 5. Projects Grid (Homepage)
+/* 5. Hero Section
    ========================================================================== */
 
-.projects {
-  padding-top: 100px;
+.hero {
+  padding-top: 140px;
   padding-bottom: 60px;
 }
 
-.projects__grid {
+.hero__content {
+  text-align: center;
+  padding: 0 var(--pad-horizontal);
+}
+
+.hero__heading {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-secondary);
+  margin-top: 16px;
+}
+
+.hero__divider {
+  height: 1px;
+  background: var(--divider);
+  margin: 60px var(--pad-horizontal) 0;
+}
+
+/* 6. Section Base
+   ========================================================================== */
+
+.section {
+  padding: 80px 0;
+}
+
+.section__inner {
+  padding: 0 var(--pad-horizontal);
+}
+
+/* 7. Works Section (Selected Works)
+   ========================================================================== */
+
+.works__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.works__title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.works__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  padding: 0 var(--pad-horizontal);
+  gap: 32px;
 }
 
 .project-card {
@@ -212,7 +267,113 @@ button {
   padding: 0 8px;
 }
 
-/* 6. Project Detail Page
+/* 8. Services Section
+   ========================================================================== */
+
+.services__title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.service-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #222;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.service-card__name {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.service-card__description {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+
+/* 9. About Section
+   ========================================================================== */
+
+.about__title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about__text p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #CCCCCC;
+}
+
+.about__portrait {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* 10. Footer
+   ========================================================================== */
+
+.footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--divider);
+}
+
+.footer__inner {
+  padding: 0 var(--pad-horizontal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__copyright {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+}
+
+/* 11. Project Detail Page
    ========================================================================== */
 
 .project {
