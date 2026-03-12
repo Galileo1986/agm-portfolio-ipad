@@ -165,13 +165,19 @@ button {
    ========================================================================== */
 
 .hero {
-  padding-top: 140px;
-  padding-bottom: 60px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .hero__content {
   text-align: center;
   padding: 0 var(--pad-horizontal);
+  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  will-change: filter, opacity, transform;
 }
 
 .hero__heading {
@@ -194,7 +200,10 @@ button {
 .hero__divider {
   height: 1px;
   background: var(--divider);
-  margin: 60px var(--pad-horizontal) 0;
+  position: absolute;
+  bottom: 0;
+  left: var(--pad-horizontal);
+  right: var(--pad-horizontal);
 }
 
 /* 6. Section Base
@@ -227,8 +236,10 @@ button {
 
 .works__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .project-card {
@@ -345,9 +356,11 @@ button {
 
 .about__portrait {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  height: auto;
+  max-height: 600px;
   object-fit: cover;
   border-radius: 4px;
+  display: block;
 }
 
 /* 10. Footer
